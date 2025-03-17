@@ -11,10 +11,10 @@
     file: app_presetup.yml
 
 # this step goes with CI
-#- name: Load NodeJS Dependencies
-#  ansible.builtin.shell: npm install
-#  args:
-#    chdir: /app
+- name: Load NodeJS Dependencies
+  ansible.builtin.shell: npm install
+  args:
+    chdir: /app
 
 - name: Download DocumentDB Pem file
   ansible.builtin.get_url:
